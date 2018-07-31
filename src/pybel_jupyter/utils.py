@@ -9,10 +9,22 @@ from pybel.canonicalize import calculate_canonical_name
 from pybel.struct.filters import filter_nodes
 from pybel.struct.filters.node_predicate_builders import data_missing_key_builder
 
+from .constants import VERSION
+
 __all__ = [
     'add_canonical_names',
     'render_template',
+    'get_version',
 ]
+
+
+def get_version():
+    """Get the software version of PyBEL-Jupyter.
+
+    :rtype: str
+    """
+    return VERSION
+
 
 CNAME = 'cname'
 node_missing_cname = data_missing_key_builder(CNAME)
