@@ -5,7 +5,7 @@
 import unittest
 
 from pybel.examples import sialic_acid_graph
-from pybel_jupyter import to_html
+from pybel_jupyter import to_html, to_jupyter_str
 
 
 class TestHTML(unittest.TestCase):
@@ -15,3 +15,8 @@ class TestHTML(unittest.TestCase):
         """Test export to HTML."""
         html = to_html(sialic_acid_graph)
         self.assertIsNotNone(html)
+
+    def test_to_jupyter(self):
+        """Test export to JavaScript for Jupyter."""
+        javascript = to_jupyter_str(sialic_acid_graph)
+        self.assertIsNotNone(javascript)
