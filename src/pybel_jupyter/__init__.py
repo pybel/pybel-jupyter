@@ -7,7 +7,7 @@ from .visualization import to_html, to_html_file, to_html_path  # noqa: F401
 
 __version__ = '0.1.0'
 
-__title__ = 'pybel-jupyter'
+__title__ = 'pybel_jupyter'
 __description__ = 'A PyBEL extension for Jupyter notebooks'
 __url__ = 'https://github.com/pybel/pybel-jupyter'
 
