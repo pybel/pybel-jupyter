@@ -81,5 +81,5 @@ def to_html_path(graph, path, color_map=None):
                     Defaults to :data:`default_color_map`
     :param str path: The file path
     """
-    with open(os.path.expanduser(path), 'w') as f:
-        to_html_file(graph, f, color_map=color_map)
+    with open(os.path.expanduser(path), 'w') as file:
+        to_html_file(graph, file, color_map=color_map)
