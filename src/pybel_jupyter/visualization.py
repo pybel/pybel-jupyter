@@ -15,7 +15,7 @@ import os
 
 from pybel import to_jsons
 
-from .constants import default_color_map
+from .constants import DEFAULT_COLOR_MAP
 from .utils import add_canonical_names, render_template
 
 __all__ = [
@@ -37,7 +37,7 @@ def build_graph_context(graph, color_map=None):
     """
     add_canonical_names(graph)
 
-    color_map = default_color_map if color_map is None else color_map
+    color_map = DEFAULT_COLOR_MAP if color_map is None else color_map
 
     return {
         'json': to_jsons(graph),

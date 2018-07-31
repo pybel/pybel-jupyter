@@ -7,7 +7,7 @@ from random import sample
 from IPython.display import Javascript
 from pybel.io import to_jsons
 
-from .constants import default_color_map
+from .constants import DEFAULT_COLOR_MAP
 from .utils import add_canonical_names, render_template
 
 __all__ = [
@@ -62,7 +62,7 @@ def to_jupyter_str(graph, width=DEFAULT_WIDTH, height=DEFAULT_HEIGHT, color_map=
     chart_id = _generate_id()
 
     if color_map is None:
-        color_map = default_color_map
+        color_map = DEFAULT_COLOR_MAP
 
     return render_template(
         'pybel_jupyter.js',
