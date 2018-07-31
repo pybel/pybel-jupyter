@@ -25,4 +25,4 @@ or from the latest code on `GitHub <https://github.com/pybel/pybel-jupyter>`_ wi
 
 .. code-block:: sh
 
-    $ python3 -m pip install git+https://github.com/pybel/pybel-jupyter.git@develop
+    $ python3 -m pip install git+https://github.com/pybel/pybel-jupyter.git
