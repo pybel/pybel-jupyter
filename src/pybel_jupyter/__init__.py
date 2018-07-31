@@ -6,7 +6,7 @@ from .inline import to_jupyter, to_jupyter_str  # noqa: F401
 from .visualization import to_html, to_html_file, to_html_path  # noqa: F401
 from .utils import get_version  # noqa: F401
 
-__version__ = '0.1.0'
+__version__ = '0.1.0-dev'
 
 __title__ = 'pybel_jupyter'
 __description__ = 'A PyBEL extension for Jupyter notebooks'
