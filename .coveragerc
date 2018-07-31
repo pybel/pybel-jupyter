@@ -1,0 +1,16 @@
+[run]
+branch = True
+source = pybel_jupyter
+omit =
+    tests/*
+
+[paths]
+source =
+    src/pybel
+    .tox/*/lib/python*/site-packages/pybel_jupyter
+
+[report]
+show_missing = True
+exclude_lines =
+    def __str__
+    def __repr__
