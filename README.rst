@@ -12,8 +12,8 @@ Inside a Jupyter notebook, run the following code at the end of the cell to get 
     >>> from pybel_jupyter import to_jupyter
     >>> to_jupyter(sialic_acid_graph)
 
-Installation |pypi_version| |python_versions| |pypi_license|
-------------------------------------------------------------
+Installation
+------------
 PyBEL-Jupyter can be installed easily from `PyPI <https://pypi.python.org/pypi/pybel-jupyter>`_ with the following code in
 your favorite terminal:
 
