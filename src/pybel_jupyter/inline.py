@@ -24,7 +24,7 @@ def _generate_id():
     return "".join(sample('abcdefghjkmopqrstuvqxyz', 16))
 
 
-def to_jupyter(graph, width=DEFAULT_WIDTH, height=DEFAULT_HEIGHT, color_map=None, replace_cnames=False):
+def to_jupyter(graph, width=DEFAULT_WIDTH, height=DEFAULT_HEIGHT, color_map=None, label=True, replace_cnames=False):
     """Display a BEL graph inline in a Jupyter notebook.
 
     To use successfully, make run as the last statement in a cell inside a Jupyter notebook.
@@ -42,11 +42,12 @@ def to_jupyter(graph, width=DEFAULT_WIDTH, height=DEFAULT_HEIGHT, color_map=None
         width=width,
         height=height,
         color_map=color_map,
+        label=label,
         replace_cnames=replace_cnames
     ))
 
 
-def to_jupyter_str(graph, width=DEFAULT_WIDTH, height=DEFAULT_HEIGHT, color_map=None, replace_cnames=False):
+def to_jupyter_str(graph, width=DEFAULT_WIDTH, height=DEFAULT_HEIGHT, color_map=None, label=True, replace_cnames=False):
     """Return the string to be javascript-ified by the Jupyter notebook function :class:`IPython.display.Javascript`.
 
     :param pybel.BELGraph graph: A BEL graph
@@ -57,7 +58,8 @@ def to_jupyter_str(graph, width=DEFAULT_WIDTH, height=DEFAULT_HEIGHT, color_map=
     :return: The javascript string to turn into magic
     :rtype: str
     """
-    add_canonical_names(graph, replace=replace_cnames)
+    if label:
+        add_canonical_names(graph, replace=replace_cnames)
     gjson = to_jsons(graph, sort_keys=True)
     chart_id = _generate_id()
 
