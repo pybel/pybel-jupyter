@@ -198,7 +198,7 @@ function init_d3_force(d3, graph, chart, width, height, function_colors) {
             }
         })
         .attr("marker-end", function (d) {
-            if (['increases', 'directlyIncreases', 'positiveCorrelation'].indexOf(d.relation) >= 0) {
+            if (['increases', 'directlyIncreases', 'positiveCorrelation', 'isA', 'partOf'].indexOf(d.relation) >= 0) {
                 return "url(#arrowhead)"
             } else if (['decreases', 'directlyDecreases', 'negativeCorrelation'].indexOf(d.relation) >= 0) {
                 return "url(#stub)"
