@@ -12,7 +12,6 @@ exclude =
     docs/source/conf.py,
     build,
     dist,
-    tests/fixtures/*,
     *.pyc,
     *.egg-info,
     .cache,
@@ -21,7 +20,10 @@ format = ${cyan}%(path)s${reset}:${yellow_bold}%(row)d${reset}:${green_bold}%(co
 ignore = D105,E501
 
 # flake8-import-order
-application-import-names = pybel_jupyter
+application-import-names =
+	pybel_jupyter
+	pybel
+	tests
 import-order-style = pycharm
 
 # mccabe

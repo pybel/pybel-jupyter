@@ -5,7 +5,6 @@
 import unittest
 
 from pybel.examples import sialic_acid_graph
-
 from pybel_jupyter import to_html, to_jupyter_str
 
 
