@@ -12,10 +12,10 @@ DEFAULT_COLOR_MAP = {
     PATHOLOGY: "#FF7F0E",
     BIOPROCESS: "#2CA02C",
     MIRNA: "#D62728",
-    COMPLEX: "#9467bd",
-    COMPOSITE: "#9467bd",
-    REACTION: "#8c564b",
-    GENE: "#e377c2",
-    ABUNDANCE: "#bcbd22",
-    RNA: "#17becf"
+    COMPLEX: "#98DF8A",
+    COMPOSITE: "#9467BD",
+    REACTION: "#000000",
+    GENE: "#FFBB78",
+    ABUNDANCE: "#AEC7E8",
+    RNA: "#FF9896"
 }
