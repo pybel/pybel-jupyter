@@ -5,10 +5,10 @@
 from random import sample
 
 from IPython.display import Javascript
-from pybel.io import to_jsons
 
+from pybel.io import to_jsons
 from .constants import DEFAULT_COLOR_MAP
-from .utils import add_canonical_names, render_template
+from .utils import render_template
 
 __all__ = [
     'to_jupyter',
@@ -58,8 +58,6 @@ def to_jupyter_str(graph, width=DEFAULT_WIDTH, height=DEFAULT_HEIGHT, color_map=
     :return: The javascript string to turn into magic
     :rtype: str
     """
-    if label:
-        add_canonical_names(graph, replace=replace_cnames)
     gjson = to_jsons(graph, sort_keys=True)
     chart_id = _generate_id()
 

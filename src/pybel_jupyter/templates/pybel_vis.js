@@ -71,6 +71,25 @@ function init_d3_force(d3, graph, chart, width, height, function_colors) {
 
     //END Pin down functionality
 
+
+    /**
+     * Gets the best name for a node object
+     * @param {object} nodeData object
+     * @returns {str} canonical name of the node
+     */
+    function getCanonicalName(nodeData) {
+        if (nodeData.cname) {
+            return nodeData.cname;
+        } else if (nodeData.name) {
+            return nodeData.name
+        } else if (nodeData.bel) {
+            return nodeData.bel
+        } else {
+            console.log('Undefined node: ' + nodeData);
+            return 'UNDEFINED'
+        }
+    }
+
     const color_circunferencia = "black";
     const default_link_color = "#AAAAAA";
     const nominal_base_node_size = 8;
@@ -81,8 +100,6 @@ function init_d3_force(d3, graph, chart, width, height, function_colors) {
     // Zoom variables
     const min_zoom = 0.1;
     const max_zoom = 10;
-    const border = 1;
-    const bordercolor = 'black';
 
     var svg = d3.select(chart).append("svg")
         .attr("width", width)
@@ -180,7 +197,7 @@ function init_d3_force(d3, graph, chart, width, height, function_colors) {
         .style("stroke", default_link_color)
         .style("stroke-dasharray", function (d) {
             if (['decreases', 'directlyDecreases', 'increases', 'directlyIncreases', 'negativeCorrelation',
-                    'positiveCorrelation'].indexOf(d.relation) >= 0) {
+                'positiveCorrelation'].indexOf(d.relation) >= 0) {
                 return "none"
             } else {
                 return "4, 4"
@@ -237,7 +254,7 @@ function init_d3_force(d3, graph, chart, width, height, function_colors) {
         .attr("dx", 12)
         .attr("dy", ".35em")
         .text(function (d) {
-            return d.cname
+            return getCanonicalName(d)
         });
 
     // Highlight on mouseenter and back to normal on mouseout
