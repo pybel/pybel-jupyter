@@ -1,5 +1,5 @@
-PyBEL-Jupyter
-=============
+PyBEL-Jupyter |build| |docs|
+============================
 A PyBEL extension for Jupyter notebooks.
 
 Getting Started
@@ -26,3 +26,11 @@ or from the latest code on `GitHub <https://github.com/pybel/pybel-jupyter>`_ wi
 .. code-block:: sh
 
     $ python3 -m pip install git+https://github.com/pybel/pybel-jupyter.git
+
+
+.. |build| image:: https://travis-ci.com/pybel/pybel-jupyter.svg?branch=master
+    :target: https://travis-ci.com/pybel/pybel-jupyter
+
+.. |docs| image:: https://readthedocs.org/projects/pybel-jupyter/badge/?version=latest
+   :target: https://pybel.readthedocs.io/projects/jupyter/en/latest/?badge=latest
+   :alt: Documentation Status
