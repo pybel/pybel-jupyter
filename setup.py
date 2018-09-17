@@ -20,13 +20,12 @@ CLASSIFIERS = [
     'License :: OSI Approved :: Apache Software License',
     'Operating System :: OS Independent',
     'Programming Language :: Python',
-    'Programming Language :: Python :: 3.4',
     'Programming Language :: Python :: 3.5',
     'Programming Language :: Python :: 3.6',
     'Topic :: Scientific/Engineering :: Bio-Informatics'
 ]
 INSTALL_REQUIRES = [
-    'pybel>=0.11.11',
+    'pybel>=0.12.0',
     'jinja2',
     'ipython',
 ]
@@ -86,5 +85,6 @@ if __name__ == '__main__':
         install_requires=INSTALL_REQUIRES,
         extras_require=EXTRAS_REQUIRE,
         tests_require=TESTS_REQUIRE,
-        entry_points=ENTRY_POINTS
+        entry_points=ENTRY_POINTS,
+        zip_safe=False,
     )
