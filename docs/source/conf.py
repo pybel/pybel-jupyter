@@ -13,7 +13,7 @@ project = 'PyBEL-Jupyter'
 copyright = '2018, Charles Tapley Hoyt'
 author = 'Charles Tapley Hoyt'
 
-release = '0.1.1-dev'
+release = '0.1.1'
 
 # The short X.Y version.
 parsed_version = re.match(
