@@ -1,5 +1,0 @@
-pybel>=0.12.0
-jinja2
-ipython
-
-sphinx-autodoc-typehints
