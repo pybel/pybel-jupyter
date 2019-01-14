@@ -17,20 +17,30 @@ CLASSIFIERS = [
     'Development Status :: 1 - Planning',
     'Environment :: Console',
     'Intended Audience :: Developers',
-    'License :: OSI Approved :: Apache Software License',
+    'License :: OSI Approved :: MIT License',
     'Operating System :: OS Independent',
     'Programming Language :: Python',
+    'Programming Language :: Python :: 3 :: Only',
     'Programming Language :: Python :: 3.5',
     'Programming Language :: Python :: 3.6',
-    'Topic :: Scientific/Engineering :: Bio-Informatics'
+    'Programming Language :: Python :: 3.7',
+    'Topic :: Scientific/Engineering :: Bio-Informatics',
+    'Topic :: Scientific/Engineering :: Chemistry',
 ]
 INSTALL_REQUIRES = [
-    'pybel>=0.12.0',
+    'pybel>=0.13.0',
     'jinja2',
     'ipython',
 ]
 
-EXTRAS_REQUIRE = {}
+EXTRAS_REQUIRE = {
+    'docs': [
+        'sphinx',
+        'sphinx-rtd-theme',
+        'sphinx-click',
+        'sphinx-autodoc-typehints',
+    ],
+}
 TESTS_REQUIRE = []
 ENTRY_POINTS = {}
 
