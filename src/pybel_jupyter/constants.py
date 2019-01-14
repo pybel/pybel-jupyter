@@ -4,7 +4,7 @@
 
 from pybel.constants import ABUNDANCE, BIOPROCESS, COMPLEX, COMPOSITE, GENE, MIRNA, PATHOLOGY, PROTEIN, REACTION, RNA
 
-VERSION = '0.2.0'
+VERSION = '0.2.1-dev'
 
 #: The color map defining the node colors in visualization
 DEFAULT_COLOR_MAP = {
