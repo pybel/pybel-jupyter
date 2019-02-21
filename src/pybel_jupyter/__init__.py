@@ -14,7 +14,7 @@ __all__ = [
     'to_jupyter_str',
 ]
 
-__version__ = '0.2.1'
+__version__ = '0.2.2-dev'
 
 __title__ = 'pybel_jupyter'
 __description__ = 'A PyBEL extension for Jupyter notebooks'
