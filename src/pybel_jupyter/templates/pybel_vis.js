@@ -74,18 +74,16 @@ function init_d3_force(d3, graph, chart, width, height, function_colors) {
 
     /**
      * Gets the best name for a node object
-     * @param {object} nodeData object
+     * @param {object} d object
      * @returns {str} canonical name of the node
      */
-    function getCanonicalName(nodeData) {
-        if (nodeData.cname) {
-            return nodeData.cname;
-        } else if (nodeData.name) {
-            return nodeData.name
-        } else if (nodeData.bel) {
-            return nodeData.bel
+    function getCanonicalName(d) {
+        if (d.name && !(d.variants || d.reactants || d.products || d.members)) {
+            return d.name
+        } else if (d.bel) {
+            return d.bel
         } else {
-            console.log('Undefined node: ' + nodeData);
+            console.log('Undefined node: ' + d);
             return 'UNDEFINED'
         }
     }
