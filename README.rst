@@ -2,15 +2,10 @@ PyBEL-Jupyter |build| |docs|
 ============================
 A PyBEL extension for Jupyter notebooks.
 
-Getting Started
----------------
-Inside a Jupyter notebook, run the following code at the end of the cell to get an interactive visualization:
+.. warning::
 
-.. code-block:: python
-
-    >>> from pybel.examples import sialic_acid_graph
-    >>> from pybel_jupyter import to_jupyter
-    >>> to_jupyter(sialic_acid_graph)
+    This module has been included in PyBEL as of v0.14.0, so it has been deprecated. You can keep using it like normal,
+    though.
 
 Installation |pypi_version| |python_versions| |pypi_license|
 ------------------------------------------------------------
@@ -26,6 +21,16 @@ or from the latest code on `GitHub <https://github.com/pybel/pybel-jupyter>`_ wi
 .. code-block:: sh
 
     $ pip install git+https://github.com/pybel/pybel-jupyter.git
+
+Getting Started
+---------------
+Inside a Jupyter notebook, run the following code at the end of the cell to get an interactive visualization:
+
+.. code-block:: python
+
+    >>> from pybel.examples import sialic_acid_graph
+    >>> from pybel_jupyter import to_jupyter
+    >>> to_jupyter(sialic_acid_graph)
 
 .. |build| image:: https://travis-ci.com/pybel/pybel-jupyter.svg?branch=master
     :target: https://travis-ci.com/pybel/pybel-jupyter
